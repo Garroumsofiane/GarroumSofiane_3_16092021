@@ -1,18 +1,189 @@
-/* Error: Undefined variable.
- *   ,
- * 8 |     background-color: $primary;
- *   |                       ^^^^^^^^
- *   '
- *   sass\_pages\_accueil.scss 8:23  @import
- *   sass\style.scss 4:9             root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 8 \2502      background-color: $primary;\d\a   \2502                        ^^^^^^^^\a   \2575 \a   sass\\_pages\\_accueil.scss 8:23  @import\a   sass\\style.scss 4:9             root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+header {
+  width: auto;
+  height: 65px;
+  text-align: center;
 }
+header .logo {
+  padding-top: 15px;
+  width: 150px;
+}
+
+footer {
+  width: auto;
+  height: 200px;
+  background-color: #353535;
+  color: white;
+}
+footer .lien_footer {
+  list-style: none;
+}
+footer .footer_color {
+  color: white;
+}
+
+.titre_footer {
+  font-family: "Shrikhand", cursif;
+}
+
+body {
+  font-family: "roboto";
+}
+
+a {
+  text-decoration: none;
+}
+
+.localite_titre_explore {
+  background-color: #f6f6f6;
+}
+.localite_titre_explore .localite {
+  width: auto;
+  height: 51px;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: space-around;
+}
+.localite_titre_explore .localite_icon {
+  display: flex;
+}
+.localite_titre_explore .fa-map-marker-alt {
+  margin-right: 20px;
+}
+
+.titre_principal {
+  text-align: center;
+}
+.titre_principal h1 {
+  font-size: 1.9em;
+}
+
+.phrase_titre {
+  text-align: center;
+  font-size: larger;
+}
+
+.btn_explore_resto_command {
+  display: flex;
+  justify-content: space-around;
+}
+.btn_explore_resto_command .explore_resto {
+  width: 220px;
+  height: 51px;
+  background-image: linear-gradient(to top left, #9356DC, #FF79DA);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  color: white;
+}
+
+.fonctionnement {
+  width: auto;
+  height: 441px;
+}
+.fonctionnement h2 {
+  padding-left: 20px;
+  margin-top: 50px;
+}
+.fonctionnement li {
+  width: 90%;
+  height: 75px;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+.fonctionnement .chiffre_fonctionnement {
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  position: relative;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icon_text {
+  margin-right: 40px;
+}
+.icon_text .icon {
+  margin-right: 20px;
+}
+.icon_text .icon:hover {
+  color: #9356DC;
+}
+
+.titre_restaurant {
+  width: -webkit-fill-available;
+  margin-left: 15px;
+  padding-top: 30px;
+}
+
+.restaurant {
+  width: auto;
+  height: 1227px;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.restaurant .presentation_restaurant {
+  height: 250px;
+  width: 90%;
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+.restaurant .img_resto {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+.restaurant .nouveau {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  background-color: #99E2D0;
+  width: 80px;
+  height: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #08e2ac;
+}
+
+.coeur_icon {
+  position: absolute;
+  right: 30px;
+  top: 195px;
+  font-size: 1.9em;
+}
+.coeur_icon .fa-heart {
+  color: #9356DC;
+}
+
+.legende {
+  margin-top: 5px;
+}
+
+.legende_titre {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.legende_titre_icon {
+  color: black;
+  padding-left: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
