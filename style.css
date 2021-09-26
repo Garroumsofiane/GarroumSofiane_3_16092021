@@ -18,6 +18,9 @@ footer {
 footer .lien_footer {
   list-style: none;
 }
+footer .footer_color {
+  color: white;
+}
 
 .titre_footer {
   font-family: "Shrikhand", cursif;
@@ -156,7 +159,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: #05c998;
+  color: #08e2ac;
 }
 
 .coeur_icon {
@@ -165,8 +168,8 @@ a {
   top: 195px;
   font-size: 1.9em;
 }
-.coeur_icon:hover {
-  background-color: #9356DC;
+.coeur_icon .fa-heart {
+  color: #9356DC;
 }
 
 .legende {
