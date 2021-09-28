@@ -5,12 +5,12 @@ a{
     text-decoration: none;
 }
 .localite_titre_explore{
-    background-color: $primary;
+    background-color: $backgroundcolor;
 
 .localite{
     width: auto;
     height: 51px;
-    background-color: #eaeaea;
+    background-color: $background_localite ;
     display: flex;
     justify-content: space-around;  
     }
@@ -132,28 +132,24 @@ a{
               }
              }
             
-             .coeur_icon{
-                position: absolute;
-                right: 30px;
-                top: 195px;
-                font-size: 1.9em;
-                
-           
-                
-                .fa-heart{
-                     color: #9356DC;
-                }               }
+            .fa-heart{
+               @include coeur;
+                    
+             }
+                           
             .legende{
                 margin-top: 5px
-                  }
-            .legende_titre{
+                   }
+                .legende_titre{
                 margin-bottom: 0px;
                 margin-top: 10px;
                      }
             .legende_titre_icon{
                 color: black;
                 padding-left: 15px;
-            }
+             }
+              
+
             
                       
                 

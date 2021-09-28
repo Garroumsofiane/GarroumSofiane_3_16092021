@@ -1,0 +1,19 @@
+@mixin header{
+        width: auto;
+        height: 65px;
+        text-align: center;
+        .logo
+        {
+            padding-top: 15px;
+            width: 150px;
+        }
+ }
+ @mixin coeur {
+    position: absolute;
+    right: 30px;
+    top: 195px;
+    font-size: 1.9em; 
+    &:hover{
+        background-color:$primary;
+ }  
+ }

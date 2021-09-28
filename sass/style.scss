@@ -1,6 +1,11 @@
+;@import "_utilitaire/mixins";
+@import "_utilitaire/variables.scss";
+
 @import "_mise en page/header";
-@import "_mise en page/footer";
 @import "_base";
+@import "_mise en page/footer";
 @import "_pages/accueil";
-@import "_utilitaire/variables.scss"
+@import "_pages/menu";
+
+
 
