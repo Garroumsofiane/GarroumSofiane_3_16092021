@@ -11,17 +11,17 @@ header{
     color: black;
 }
  }
- .fa-heart{
+ .coeur_icon_menu{
      @include coeur;
-     .coeur_icon{
-         position: absolute;
-         top: 300px;
+        position: absolute;
+        right: 30px;
+        top: 35px;
+        font-size: xx-large;
      }
- }
+ 
  .photo_resto{
      width: 100%;
-     height: 255px;
-     
+     height: 255px;  
  }
  .menu{
     border-radius: 40px;
@@ -40,9 +40,23 @@ header{
         margin-bottom: 20px;
         justify-content: center;
         flex-direction: column;
+         }
+        .titre_menu{
+            height: 50px;
+            font-family: "shrikhand";
+            width: 100%;
+            margin-left: 50px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 1.6rem;
+             }
+            .titre_h4{
+                width: 100%;
+                margin-left: 50px;
+                margin-top: 0px;
     }
-
- }
+        }
+ 
 .legende_menu{
         margin: 0px;
         font-weight: bold;

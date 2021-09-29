@@ -10,7 +10,7 @@ a{
 .localite{
     width: auto;
     height: 51px;
-    background-color: $background_localite ;
+    background-color: $background_localite;
     display: flex;
     justify-content: space-around;  
     }
@@ -132,7 +132,7 @@ a{
               }
              }
             
-            .fa-heart{
+            .coeur_icon{
                @include coeur;
                     
              }

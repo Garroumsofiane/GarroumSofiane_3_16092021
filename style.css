@@ -162,14 +162,14 @@ a {
   color: #08e2ac;
 }
 
-.fa-heart {
+.coeur_icon {
   position: absolute;
   right: 30px;
   top: 195px;
   font-size: 1.9em;
 }
-.fa-heart:hover {
-  background-color: #9356DC;
+.coeur_icon:hover {
+  background-image: linear-gradient(to bottom left, #9356DC, #FF79DA);
 }
 
 .legende {
@@ -207,18 +207,18 @@ header .fa-arrow-left {
   color: black;
 }
 
-.fa-heart {
+.coeur_icon_menu {
   position: absolute;
   right: 30px;
   top: 195px;
   font-size: 1.9em;
-}
-.fa-heart:hover {
-  background-color: #9356DC;
-}
-.fa-heart .coeur_icon {
   position: absolute;
-  top: 300px;
+  right: 30px;
+  top: 35px;
+  font-size: xx-large;
+}
+.coeur_icon_menu:hover {
+  background-image: linear-gradient(to bottom left, #9356DC, #FF79DA);
 }
 
 .photo_resto {
@@ -244,6 +244,20 @@ header .fa-arrow-left {
   margin-bottom: 20px;
   justify-content: center;
   flex-direction: column;
+}
+.menu .titre_menu {
+  height: 50px;
+  font-family: "shrikhand";
+  width: 100%;
+  margin-left: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 1.6rem;
+}
+.menu .titre_h4 {
+  width: 100%;
+  margin-left: 50px;
+  margin-top: 0px;
 }
 
 .legende_menu {
