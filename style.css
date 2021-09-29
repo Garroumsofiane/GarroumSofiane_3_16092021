@@ -248,15 +248,14 @@ header .fa-arrow-left {
 .menu .titre_menu {
   height: 50px;
   font-family: "shrikhand";
-  width: 100%;
-  margin-left: 50px;
+  width: 85%;
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: 1.6rem;
 }
 .menu .titre_h4 {
-  width: 100%;
-  margin-left: 50px;
+  width: 85%;
+  margin-left: 0px;
   margin-top: 0px;
 }
 
