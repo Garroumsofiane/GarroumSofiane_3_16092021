@@ -33,19 +33,12 @@ a{
     text-align: center;
     font-size: larger;
 }
-.btn_explore_resto_command{ 
+.btn_explore_resto_command{
     display: flex;
     justify-content: space-around;
-    .explore_resto{
-    width: 220px;
-    height: 51px;
-    background-image: linear-gradient(to top left, #9356DC,#FF79DA);  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25px;
-    color: white;
-     }
+}
+    .explore_resto {
+    @include btn_index
  }
 
  .fonctionnement{

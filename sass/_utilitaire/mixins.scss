@@ -17,3 +17,17 @@
         background-image: linear-gradient(to bottom left, #9356DC,#FF79DA);
  }  
  }
+ @mixin btn_index{
+        width: 220px;
+        height: 51px;
+        background-image: linear-gradient(to top left, #9356DC,#FF79DA);  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 25px;
+        color: white;
+ }
+
+    
+ 
+ 

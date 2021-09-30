@@ -3,15 +3,27 @@ footer{
     height: 200px;
     background-color: rgb(53, 53, 53);
     color: white;
-    
+    .titre_footer{
+    font-family :'Shrikhand', cursif ;
+    padding-left: 40px;
+    padding-top: 20px;
+    font-size: larger;
+    margin-top: 0px;
+}
     .lien_footer{
         list-style: none;
+        margin-bottom: 10px;
+    
     }
     .footer_color{
         color: white;
     }
 
 }
-.titre_footer{
-    font-family :'Shrikhand', cursif ;
+.icon_footer{
+    margin-right: 10px;
+ }
+.fa-hands-helping{
+    font-size: x-small;
 }
+  
