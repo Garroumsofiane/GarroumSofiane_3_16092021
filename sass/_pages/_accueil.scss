@@ -12,11 +12,19 @@ a{
     height: 51px;
     background-color: $background_localite;
     display: flex;
-    justify-content: space-around;  
+    align-items: center;
+    justify-content: center;
+   
     }
 
     .localite_icon{
         display: flex;
+        color: black;
+        border: none;
+        background-color: $background_localite;
+        width: 110px;
+         outline: 0;
+         font-size: medium; 
     }
 
     .fa-map-marker-alt{
@@ -32,13 +40,17 @@ a{
 .phrase_titre{
     text-align: center;
     font-size: larger;
+    margin-bottom: 0px;
 }
 .btn_explore_resto_command{
     display: flex;
     justify-content: space-around;
-}
+    padding-bottom: 50px;
+    padding-top: 30px;
+
     .explore_resto {
-    @include btn_index
+    @include btn_index;
+ }
  }
 
  .fonctionnement{
@@ -60,13 +72,14 @@ a{
          border-radius: 20px;
          margin-bottom: 40px;
          font-weight: bold;
+         box-shadow: 1px 3px 9px 1px $background_localite;
      }
      .chiffre_fonctionnement{
          color: white;
          background-color: #9356DC;
          border-radius: 50%;
          position: relative;
-         right: 20px;
+         right: 30px;
          width: 30px;
          height: 30px;
          display: flex;
@@ -95,6 +108,7 @@ a{
      display: flex;
      flex-direction: column;
      align-items: center;
+     padding-bottom: 30px;
      
      .presentation_restaurant{
          height: 250px;
@@ -103,6 +117,7 @@ a{
          background-color: white;
          border-radius: 20px;
          margin-bottom: 30px;
+         box-shadow: 1px 3px 9px 1px $background_localite;
         }
          .img_resto{
              width: 100%;
@@ -122,12 +137,12 @@ a{
              justify-content: space-around;
              align-items: center;
              color: #08e2ac;
+             border-radius: 2px;
               }
              }
             
             .coeur_icon{
-               @include coeur;
-                    
+               @include coeur;    
              }
                            
             .legende{

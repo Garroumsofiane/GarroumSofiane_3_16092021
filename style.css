@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 header {
   width: auto;
   height: 65px;
@@ -54,10 +54,17 @@ a {
   height: 51px;
   background-color: #eaeaea;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
 }
 .localite_titre_explore .localite_icon {
   display: flex;
+  color: black;
+  border: none;
+  background-color: #eaeaea;
+  width: 110px;
+  outline: 0;
+  font-size: medium;
 }
 .localite_titre_explore .fa-map-marker-alt {
   margin-right: 20px;
@@ -73,14 +80,16 @@ a {
 .phrase_titre {
   text-align: center;
   font-size: larger;
+  margin-bottom: 0px;
 }
 
 .btn_explore_resto_command {
   display: flex;
   justify-content: space-around;
+  padding-bottom: 50px;
+  padding-top: 30px;
 }
-
-.explore_resto {
+.btn_explore_resto_command .explore_resto {
   width: 220px;
   height: 51px;
   background-image: linear-gradient(to top left, #9356DC, #FF79DA);
@@ -89,6 +98,7 @@ a {
   justify-content: center;
   border-radius: 25px;
   color: white;
+  box-shadow: 0px 5px 5px 6px #eaeaea;
 }
 
 .fonctionnement {
@@ -110,13 +120,14 @@ a {
   border-radius: 20px;
   margin-bottom: 40px;
   font-weight: bold;
+  box-shadow: 1px 3px 9px 1px #eaeaea;
 }
 .fonctionnement .chiffre_fonctionnement {
   color: white;
   background-color: #9356DC;
   border-radius: 50%;
   position: relative;
-  right: 20px;
+  right: 30px;
   width: 30px;
   height: 30px;
   display: flex;
@@ -147,6 +158,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 30px;
 }
 .restaurant .presentation_restaurant {
   height: 250px;
@@ -155,6 +167,7 @@ a {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 30px;
+  box-shadow: 1px 3px 9px 1px #eaeaea;
 }
 .restaurant .img_resto {
   width: 100%;
@@ -173,6 +186,7 @@ a {
   justify-content: space-around;
   align-items: center;
   color: #08e2ac;
+  border-radius: 2px;
 }
 
 .coeur_icon {
@@ -182,7 +196,7 @@ a {
   font-size: 1.9em;
 }
 .coeur_icon:hover {
-  background-image: linear-gradient(to bottom left, #9356DC, #FF79DA);
+  color: #9356DC;
 }
 
 .legende {
@@ -207,6 +221,8 @@ header {
   width: auto;
   height: 65px;
   text-align: center;
+  box-shadow: 1px 0px 5px 0px grey;
+  position: relative;
 }
 header .logo {
   padding-top: 15px;
@@ -228,10 +244,11 @@ header .fa-arrow-left {
   position: absolute;
   right: 30px;
   top: 35px;
-  font-size: xx-large;
+  font-size: x-large;
+  opacity: 0.7;
 }
 .coeur_icon_menu:hover {
-  background-image: linear-gradient(to bottom left, #9356DC, #FF79DA);
+  color: #9356DC;
 }
 
 .photo_resto {
@@ -248,10 +265,10 @@ header .fa-arrow-left {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 .menu .carte_menu {
-  width: 90%;
+  width: 100%;
   height: 70px;
   border-radius: 25px;
   display: flex;
@@ -259,6 +276,7 @@ header .fa-arrow-left {
   margin-bottom: 20px;
   justify-content: center;
   flex-direction: column;
+  box-shadow: 1px 3px 9px 1px #eaeaea;
 }
 .menu .titre_menu {
   height: 50px;
@@ -268,16 +286,38 @@ header .fa-arrow-left {
   margin-bottom: 0px;
   font-size: 1.6rem;
 }
-.menu .titre_h4 {
+
+.carte {
+  width: 95%;
+}
+
+.carte_resto {
+  margin-bottom: 30px;
+}
+
+.titre_h4 {
   width: 85%;
-  margin-left: 0px;
+  margin-left: 10px;
   margin-top: 0px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+  font-weight: normal;
+}
+
+.bordure_h4 {
+  width: 40px;
+  height: 10px;
+  border-top: 2px solid;
+  display: flex;
+  align-self: flex-start;
+  color: #99E2D0;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .legende_menu {
   margin: 0px;
   font-weight: bold;
-  font-size: 1.1rem;
   padding-left: 10px;
 }
 
@@ -287,9 +327,23 @@ header .fa-arrow-left {
   display: flex;
   justify-content: space-between;
   padding-left: 10px;
+  font-size: smaller;
+  opacity: 0.9;
 }
 .accompagnement .prix_menu {
   margin-right: 30px;
+}
+
+.resto_command {
+  width: 180px;
+  height: 51px;
+  background-image: linear-gradient(to top left, #9356DC, #FF79DA);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  color: white;
+  box-shadow: 0px 5px 5px 6px #eaeaea;
 }
 
 /*# sourceMappingURL=style.css.map */

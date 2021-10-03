@@ -2,6 +2,8 @@
         width: auto;
         height: 65px;
         text-align: center;
+        box-shadow: 1px 0px 5px 0px grey;
+        position: relative;
         .logo
         {
             padding-top: 15px;
@@ -14,7 +16,7 @@
     top: 195px;
     font-size: 1.9em; 
     &:hover{
-        background-image: linear-gradient(to bottom left, #9356DC,#FF79DA);
+        color: $primary;
  }  
  }
  @mixin btn_index{
@@ -26,8 +28,21 @@
         justify-content: center;
         border-radius: 25px;
         color: white;
+        box-shadow: 0px 5px 5px 6px $background_localite;
+       
+        
  }
-
+ @mixin btn_menu{
+       width: 180px;
+       height: 51px;
+       background-image: linear-gradient(to top left, #9356DC,#FF79DA);  
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       border-radius: 25px;
+       color: white;
+       box-shadow: 0px 5px 5px 6px $background_localite;
+}
     
  
  
