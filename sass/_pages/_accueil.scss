@@ -49,8 +49,8 @@ a{
     padding-top: 30px;
 
     .explore_resto {
-    @include btn_index;
- }
+    @include btn;
+ } 
  }
 
  .fonctionnement{
@@ -73,13 +73,21 @@ a{
          margin-bottom: 40px;
          font-weight: bold;
          box-shadow: 1px 3px 9px 1px $background_localite;
+         &:hover{ 
+                background-color: #F5EDFF;
+         }
+         .icon{
+         &:hover{
+            color:$primary;
+        }
+         }
      }
      .chiffre_fonctionnement{
          color: white;
-         background-color: #9356DC;
+         background-color: $primary;
          border-radius: 50%;
-         position: relative;
-         right: 30px;
+         position: absolute;
+         left: 25px;
          width: 30px;
          height: 30px;
          display: flex;
@@ -88,12 +96,9 @@ a{
      }
  }
  .icon_text{
-    margin-right: 40px;
+    margin-right: 20px;
     .icon{
         margin-right: 20px;
-        &:hover{
-            color:#9356DC ;
-        }
     }
  }
  .titre_restaurant{
@@ -125,26 +130,23 @@ a{
              object-fit: cover;
              border-radius: 20px 20px 0px 0px;
          }
-          
-         .nouveau{
-             position: absolute;
-             top: 0px;
-             right: 20px;
-             background-color:#99E2D0 ;
-             width: 80px;
-             height: 25px;
-             display: flex;
-             justify-content: space-around;
-             align-items: center;
-             color: #08e2ac;
-             border-radius: 2px;
-              }
+                .nouveau{
+                    position: absolute;
+                    top: 0px;
+                    right: 20px;
+                    background-color:#99E2D0 ;
+                    width: 80px;
+                    height: 25px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    color: #08e2ac;
+                    border-radius: 2px;
+                    }
              }
-            
             .coeur_icon{
                @include coeur;    
-             }
-                           
+             }             
             .legende{
                 margin-top: 5px
                    }
@@ -157,7 +159,7 @@ a{
                 padding-left: 15px;
              }
               
-
+            
             
                       
                 

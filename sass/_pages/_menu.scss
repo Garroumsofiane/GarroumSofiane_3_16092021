@@ -77,8 +77,6 @@ header{
             margin-left: 10px;
             margin-bottom: 10px
             }
-              
-
 .legende_menu{
         margin: 0px;
         font-weight: bold;
@@ -97,10 +95,11 @@ header{
             }
 }
 .resto_command{
-        @include btn_menu; 
+        @include btn;
+        width:180px;
          
 }
-    
+  
 
 
 
