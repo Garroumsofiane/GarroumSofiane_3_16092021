@@ -125,7 +125,7 @@ a {
 .fonctionnement li:hover {
   background-color: #F5EDFF;
 }
-.fonctionnement li .icon:hover {
+.fonctionnement li:hover .icon {
   color: #9356DC;
 }
 .fonctionnement .chiffre_fonctionnement {
@@ -270,7 +270,16 @@ header .fa-arrow-left {
   align-items: center;
   padding-bottom: 20px;
 }
-.menu .carte_menu {
+.menu .titre_menu {
+  height: 50px;
+  font-family: "shrikhand";
+  width: 85%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 1.6rem;
+}
+
+.carte_menu {
   width: 100%;
   height: 70px;
   border-radius: 25px;
@@ -281,13 +290,58 @@ header .fa-arrow-left {
   flex-direction: column;
   box-shadow: 1px 3px 9px 1px #eaeaea;
 }
-.menu .titre_menu {
-  height: 50px;
-  font-family: "shrikhand";
-  width: 85%;
-  margin-top: 0px;
+.carte_menu__legende_menu {
+  margin: 0px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.carte_menu__accompagnement {
+  margin-top: 5px;
   margin-bottom: 0px;
-  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  font-size: smaller;
+  opacity: 0.9;
+}
+.carte_menu__prix_menu {
+  margin-right: 30px;
+}
+.carte_menu__confirmation {
+  background-color: #99E2D0;
+  margin: -1rem -5rem -1rem 18.2rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+.carte_menu__confirmation:hover {
+  margin-right: -1rem;
+}
+.carte_menu__icon {
+  color: #99E2D0;
+}
+.carte_menu__wrapIcon {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+.carte_menu__wrapIcon:hover {
+  transform: rotate(0);
+}
+
+.carte_entre_plat_dessert {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .carte {
@@ -356,8 +410,8 @@ li:hover {
 
 .carte_menu {
   cursor: pointer;
-  animation: itemAppear 4s;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation: itemAppear 1s;
+  animation-timing-function: cubic-bezier(0.32, 0.28, 1, 1);
   animation-fill-mode: both;
   transform: scale(0);
   max-width: 100%;
@@ -464,6 +518,65 @@ li:hover {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@media only screen and (min-width :1024px) {
+  .fonctionnement {
+    height: 150px;
+  }
+  .fonctionnement ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .fonctionnement li {
+    width: 30%;
+    position: relative;
+  }
+  .fonctionnement li .chiffre_fonctionnement {
+    left: -15px;
+  }
+
+  .restaurant {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .restaurant .presentation_restaurant {
+    width: 45%;
+  }
+
+  .liste_footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+  }
+
+  .photo_resto {
+    height: 500px;
+  }
+
+  .menu {
+    margin-bottom: 0px;
+  }
+  .menu .titre_menu {
+    text-align-last: center;
+  }
+  .menu .carte_entre_plat_dessert {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .menu .carte {
+    width: 30%;
+  }
+
+  .resto_command {
+    font-size: 1.5rem;
+    width: 300px;
   }
 }
 

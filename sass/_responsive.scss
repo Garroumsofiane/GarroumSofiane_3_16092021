@@ -1,0 +1,59 @@
+@media #{$responsive_min_1024} {
+    .fonctionnement{
+        height: 150px;
+    
+    ul{
+        display: flex;
+        justify-content: space-between;
+         }
+        li{
+            width: 30%;
+            position: relative;
+            .chiffre_fonctionnement{
+                left: -15px;
+
+            }
+        }
+    }
+    .restaurant{
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .presentation_restaurant{
+            width: 45%;
+        }
+    }
+    .liste_footer{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 40px;
+    }
+    .photo_resto{
+        height: 500px;
+    }
+    .menu{
+        margin-bottom: 0px;
+        .titre_menu{
+            text-align-last: center;
+        }
+        .carte_entre_plat_dessert{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+         .carte{
+        width: 30%;
+        }
+     }
+     
+         .resto_command{
+            
+             font-size: 1.5rem;
+             width: 300px;
+         }
+     
+}

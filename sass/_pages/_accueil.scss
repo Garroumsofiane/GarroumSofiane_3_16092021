@@ -75,12 +75,11 @@ a{
          box-shadow: 1px 3px 9px 1px $background_localite;
          &:hover{ 
                 background-color: #F5EDFF;
-         }
          .icon{
-         &:hover{
             color:$primary;
         }
          }
+         
      }
      .chiffre_fonctionnement{
          color: white;

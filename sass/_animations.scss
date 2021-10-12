@@ -3,8 +3,8 @@ li:hover{
 }
 .carte_menu { 
   cursor: pointer;
-  animation: itemAppear 4s;
-  animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+  animation: itemAppear 1s;
+  animation-timing-function: cubic-bezier(0.32, 0.28, 1, 1);
   animation-fill-mode: both;
   transform: scale(0);
   max-width: 100%;
@@ -22,6 +22,7 @@ li:hover{
     animation-delay:  #{$i/2}s;
   }
 }
+
      .loader {
       position: fixed;
       height: 100%;

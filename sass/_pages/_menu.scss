@@ -27,12 +27,22 @@ header{
  .menu{
     border-radius: 40px 40px 0 0;
     position: relative;
+
     margin-top: -55px;
     background-color:$backgroundcolor;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 20px; 
+    .titre_menu{
+            height: 50px;
+            font-family: "shrikhand";
+            width: 85%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 1.6rem;
+             }
+              }
     .carte_menu{
         width: 100%;
         height: 70px;
@@ -43,23 +53,67 @@ header{
         justify-content: center;
         flex-direction: column; 
         box-shadow: 1px 3px 9px 1px $background_localite;
-       
-         }
-        .titre_menu{
-            height: 50px;
-            font-family: "shrikhand";
-            width: 85%;
-            margin-top: 0px;
+        &__legende_menu{
+            margin: 0px;
+            font-weight: bold;
+            padding-left: 10px;
+    }
+        &__accompagnement{ 
+            margin-top: 5px;
             margin-bottom: 0px;
-            font-size: 1.6rem;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 10px;
+            font-size: smaller;
+            opacity: 0.9;
+        }
+        &__prix_menu{
+            margin-right: 30px;
+        }
+                
+        &__confirmation {
+            background-color: $tertiary;
+            margin: -1rem -5rem -1rem 18.2rem;
+            width: 4rem;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            transition-duration: 0.5s;
+           &:hover{
+            margin-right: -1rem;
              }
               }
+           &__icon {
+            color: $tertiary;
+          } 
+          &__wrapIcon {
+            height: 1.6rem;
+            width: 1.6rem;
+            background-color: white;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius: 100px;
+            transform: rotate(180deg);
+            transition-duration: 0.5s;
+          
+          &:hover{
+            transform: rotate(0);
+          }
+          }
+            }
+ .carte_entre_plat_dessert{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }                   
+          
 .carte{
     width: 95%;}
     .carte_resto{
         margin-bottom: 30px;
     }
-
 .titre_h4{
     width: 85%;
     margin-left: 10px;
