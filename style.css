@@ -270,6 +270,12 @@ header .fa-arrow-left {
   align-items: center;
   padding-bottom: 20px;
 }
+.menu .carte_entre_plat_dessert {
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .menu .titre_menu {
   height: 50px;
   font-family: "shrikhand";
@@ -289,40 +295,24 @@ header .fa-arrow-left {
   justify-content: center;
   flex-direction: column;
   box-shadow: 1px 3px 9px 1px #eaeaea;
+  position: relative;
+  overflow: hidden;
 }
-.carte_menu__legende_menu {
-  margin: 0px;
-  font-weight: bold;
-  padding-left: 10px;
+.carte_menu:hover .confirmation {
+  animation-name: glissage;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
 }
-.carte_menu__accompagnement {
-  margin-top: 5px;
-  margin-bottom: 0px;
-  display: flex;
-  justify-content: space-between;
-  padding-left: 10px;
-  font-size: smaller;
-  opacity: 0.9;
+.carte_menu:hover .wrapIcon {
+  transform: rotate(0);
 }
-.carte_menu__prix_menu {
-  margin-right: 30px;
+.carte_menu:hover .prix_menu {
+  animation-name: glissage;
+  animation-duration: 1s;
+  margin-right: 3.5rem;
+  animation-fill-mode: forwards;
 }
-.carte_menu__confirmation {
-  background-color: #99E2D0;
-  margin: -1rem -5rem -1rem 18.2rem;
-  width: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition-duration: 0.5s;
-}
-.carte_menu__confirmation:hover {
-  margin-right: -1rem;
-}
-.carte_menu__icon {
-  color: #99E2D0;
-}
-.carte_menu__wrapIcon {
+.carte_menu .wrapIcon {
   height: 1.6rem;
   width: 1.6rem;
   background-color: white;
@@ -331,19 +321,33 @@ header .fa-arrow-left {
   justify-content: center;
   border-radius: 100px;
   transform: rotate(180deg);
-  transition-duration: 0.5s;
-}
-.carte_menu__wrapIcon:hover {
-  transform: rotate(0);
+  transition-duration: 1s;
 }
 
-.carte_entre_plat_dessert {
-  width: 95%;
+.icon {
+  color: #99E2D0;
+}
+
+.confirmation {
+  background-color: #99E2D0;
+  position: absolute;
+  width: 4rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+  height: 100%;
+  right: -64px;
 }
 
+@keyframes glissage {
+  100% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 .carte {
   width: 95%;
 }

@@ -24,6 +24,7 @@ header{
      height: 255px;  
      object-fit: cover;
  }
+ 
  .menu{
     border-radius: 40px 40px 0 0;
     position: relative;
@@ -34,6 +35,12 @@ header{
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px; 
+    .carte_entre_plat_dessert{
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
     .titre_menu{
             height: 50px;
             font-family: "shrikhand";
@@ -53,40 +60,24 @@ header{
         justify-content: center;
         flex-direction: column; 
         box-shadow: 1px 3px 9px 1px $background_localite;
-        &__legende_menu{
-            margin: 0px;
-            font-weight: bold;
-            padding-left: 10px;
-    }
-        &__accompagnement{ 
-            margin-top: 5px;
-            margin-bottom: 0px;
-            display: flex;
-            justify-content: space-between;
-            padding-left: 10px;
-            font-size: smaller;
-            opacity: 0.9;
-        }
-        &__prix_menu{
-            margin-right: 30px;
-        }
-                
-        &__confirmation {
-            background-color: $tertiary;
-            margin: -1rem -5rem -1rem 18.2rem;
-            width: 4rem;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            transition-duration: 0.5s;
-           &:hover{
-            margin-right: -1rem;
-             }
-              }
-           &__icon {
-            color: $tertiary;
-          } 
-          &__wrapIcon {
+        position: relative;
+        overflow: hidden;
+         &:hover .confirmation{
+                animation-name: glissage;
+                animation-duration: 0.6s; 
+                animation-fill-mode: forwards;
+         }
+         &:hover .wrapIcon{ 
+            transform: rotate(0);
+          }
+          &:hover .prix_menu{
+            animation-name: glissage;
+                animation-duration: 1s; 
+                margin-right: 3.5rem;
+                animation-fill-mode: forwards;
+          }
+          
+          .wrapIcon {
             height: 1.6rem;
             width: 1.6rem;
             background-color: white;
@@ -95,19 +86,43 @@ header{
             justify-content:center;
             border-radius: 100px;
             transform: rotate(180deg);
-            transition-duration: 0.5s;
-          
-          &:hover{
-            transform: rotate(0);
+            transition-duration: 1s;
+           }
           }
+           
+          .icon {
+            color: $tertiary;
           }
-            }
- .carte_entre_plat_dessert{
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- }                   
+        
+            .confirmation {
+            background-color: $tertiary;
+            position: absolute;
+            width: 4rem;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            transition-duration: 0.5s; 
+            height: 100%;
+            right: -64px;
+            
+        }
+              
+     @keyframes glissage {
+    100% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+         
+        
+             
+            
+            
+             
           
 .carte{
     width: 95%;}
