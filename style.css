@@ -275,6 +275,8 @@ header .fa-arrow-left {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu .titre_menu {
   height: 50px;
@@ -298,12 +300,12 @@ header .fa-arrow-left {
   position: relative;
   overflow: hidden;
 }
-.carte_menu:hover .confirmation {
+.carte_menu:hover:focus .confirmation {
   animation-name: glissage;
   animation-duration: 0.6s;
   animation-fill-mode: forwards;
 }
-.carte_menu:hover .wrapIcon {
+.carte_menu:hover:focus .wrapIcon {
   transform: rotate(0);
 }
 .carte_menu:hover .prix_menu {
@@ -380,6 +382,8 @@ header .fa-arrow-left {
   margin: 0px;
   font-weight: bold;
   padding-left: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .accompagnement {
@@ -390,6 +394,8 @@ header .fa-arrow-left {
   padding-left: 10px;
   font-size: smaller;
   opacity: 0.9;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .accompagnement .prix_menu {
   margin-right: 30px;
@@ -406,6 +412,9 @@ header .fa-arrow-left {
   color: white;
   box-shadow: 0px 5px 5px 6px #eaeaea;
   width: 180px;
+}
+.resto_command:hover:active {
+  box-shadow: 0px 5px 15px 6px #eaeaea;
 }
 
 li:hover {
