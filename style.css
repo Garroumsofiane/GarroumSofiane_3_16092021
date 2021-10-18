@@ -275,8 +275,6 @@ header .fa-arrow-left {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 .menu .titre_menu {
   height: 50px;
@@ -294,24 +292,25 @@ header .fa-arrow-left {
   display: flex;
   background-color: white;
   margin-bottom: 20px;
-  justify-content: center;
   flex-direction: column;
   box-shadow: 1px 3px 9px 1px #eaeaea;
-  position: relative;
   overflow: hidden;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.carte_menu:hover:focus .confirmation {
+.carte_menu:focus .confirmation {
   animation-name: glissage;
   animation-duration: 0.6s;
   animation-fill-mode: forwards;
 }
-.carte_menu:hover:focus .wrapIcon {
+.carte_menu:focus .wrapIcon {
   transform: rotate(0);
 }
-.carte_menu:hover .prix_menu {
+.carte_menu:focus .prix_menu {
   animation-name: glissage;
-  animation-duration: 1s;
-  margin-right: 3.5rem;
+  animation-duration: 0.5s;
+  margin-right: 2rem;
   animation-fill-mode: forwards;
 }
 .carte_menu .wrapIcon {
@@ -324,6 +323,15 @@ header .fa-arrow-left {
   border-radius: 100px;
   transform: rotate(180deg);
   transition-duration: 1s;
+}
+.carte_menu .prix_menu {
+  margin-right: 30px;
+  font-weight: bold;
+  height: -webkit-fill-available;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 13px;
+  padding-left: 20px;
 }
 
 .icon {
@@ -378,6 +386,11 @@ header .fa-arrow-left {
   margin-bottom: 10px;
 }
 
+.legende_accompagnement {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .legende_menu {
   margin: 0px;
   font-weight: bold;
@@ -396,6 +409,8 @@ header .fa-arrow-left {
   opacity: 0.9;
   text-overflow: ellipsis;
   overflow: hidden;
+  display: block;
+  padding-right: 30px;
 }
 .accompagnement .prix_menu {
   margin-right: 30px;

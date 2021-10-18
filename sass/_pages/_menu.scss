@@ -40,8 +40,6 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-overflow: ellipsis;
-    overflow: hidden;
  }
     .titre_menu{
             height: 50px;
@@ -58,24 +56,25 @@ header{
         border-radius: 25px;
         display: flex;
         background-color: white;
-        margin-bottom: 20px;
-        justify-content: center;
+        margin-bottom: 20px;   
         flex-direction: column; 
         box-shadow: 1px 3px 9px 1px $background_localite;
-        position: relative;
         overflow: hidden;
-         &:hover:focus .confirmation{
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+         &:focus .confirmation{
                 animation-name: glissage;
                 animation-duration: 0.6s; 
                 animation-fill-mode: forwards;
          }
-         &:hover:focus .wrapIcon{ 
+         &:focus .wrapIcon{ 
             transform: rotate(0);
           }
-          &:hover .prix_menu{
+          &:focus .prix_menu{
             animation-name: glissage;
-                animation-duration: 1s; 
-                margin-right: 3.5rem;
+                animation-duration: 0.5s; 
+                margin-right: 2rem;
                 animation-fill-mode: forwards;
           }
           
@@ -89,9 +88,17 @@ header{
             border-radius: 100px;
             transform: rotate(180deg);
             transition-duration: 1s;
-           }
-          }
-           
+        }
+            .prix_menu{
+                margin-right: 30px;
+                font-weight: bold;
+                height: -webkit-fill-available;
+                display: flex;
+                align-items: flex-end;
+                margin-bottom: 13px;
+                padding-left: 20px;
+            } 
+      }    
           .icon {
             color: $tertiary;
           }
@@ -141,6 +148,10 @@ header{
             margin-left: 10px;
             margin-bottom: 10px
             }
+        .legende_accompagnement{
+            overflow: hidden;
+            white-space: nowrap;
+        } 
 .legende_menu{
         margin: 0px;
         font-weight: bold;
@@ -158,6 +169,8 @@ header{
         opacity: 0.9;
         text-overflow: ellipsis;
         overflow: hidden;
+        display: block;
+        padding-right: 30px;
             .prix_menu{
                 margin-right: 30px;
             }
