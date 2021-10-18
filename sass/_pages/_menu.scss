@@ -63,15 +63,15 @@ header{
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
-         &:focus .confirmation{
+         &:hover .confirmation{
                 animation-name: glissage;
                 animation-duration: 0.6s; 
                 animation-fill-mode: forwards;
          }
-         &:focus .wrapIcon{ 
+         &:hover .wrapIcon{ 
             transform: rotate(0);
           }
-          &:focus .prix_menu{
+          &:hover .prix_menu{
             animation-name: glissage;
                 animation-duration: 0.5s; 
                 margin-right: 2rem;

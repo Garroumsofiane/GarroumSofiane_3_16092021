@@ -299,15 +299,15 @@ header .fa-arrow-left {
   flex-direction: row;
   justify-content: space-between;
 }
-.carte_menu:focus .confirmation {
+.carte_menu:hover .confirmation {
   animation-name: glissage;
   animation-duration: 0.6s;
   animation-fill-mode: forwards;
 }
-.carte_menu:focus .wrapIcon {
+.carte_menu:hover .wrapIcon {
   transform: rotate(0);
 }
-.carte_menu:focus .prix_menu {
+.carte_menu:hover .prix_menu {
   animation-name: glissage;
   animation-duration: 0.5s;
   margin-right: 2rem;
