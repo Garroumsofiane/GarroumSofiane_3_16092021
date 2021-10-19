@@ -28,7 +28,7 @@ header{
  .menu{
     border-radius: 40px 40px 0 0;
     position: relative;
-
+    overflow: hidden;
     margin-top: -55px;
     background-color:$backgroundcolor;
     display: flex;
@@ -64,15 +64,15 @@ header{
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
-         &:hover .confirmation{
+         &:focus .confirmation{
                 animation-name: glissage;
                 animation-duration: 0.6s; 
                 animation-fill-mode: forwards;
          }
-         &:hover .wrapIcon{ 
+         &:focus .wrapIcon{ 
             transform: rotate(0);
           }
-          &:hover .prix_menu{
+          &:focus .prix_menu{
             animation-name: glissage;
                 animation-duration: 0.5s; 
                 margin-right: 2rem;
