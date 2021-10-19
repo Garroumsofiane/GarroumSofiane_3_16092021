@@ -306,6 +306,7 @@ header .fa-arrow-left {
   animation-name: glissage;
   animation-duration: 0.6s;
   animation-fill-mode: forwards;
+  display: block;
 }
 .carte_menu:hover .wrapIcon {
   transform: rotate(0);

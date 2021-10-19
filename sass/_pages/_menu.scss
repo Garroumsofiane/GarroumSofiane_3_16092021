@@ -69,6 +69,7 @@ header{
                 animation-name: glissage;
                 animation-duration: 0.6s; 
                 animation-fill-mode: forwards;
+                display: block;
          }
          &:hover .wrapIcon{ 
             transform: rotate(0);
