@@ -40,6 +40,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
  }
     .titre_menu{
             height: 50px;
@@ -64,21 +65,21 @@ header{
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
-         &:active .confirmation{
+         &:hover .confirmation{
                 animation-name: glissage;
                 animation-duration: 0.6s; 
                 animation-fill-mode: forwards;
          }
-         &:active .wrapIcon{ 
+         &:hover .wrapIcon{ 
             transform: rotate(0);
           }
-          &:active .prix_menu{
+          &:hover .prix_menu{
             animation-name: glissage;
                 animation-duration: 0.5s; 
                 margin-right: 2rem;
                 animation-fill-mode: forwards;
           }
-          
+           
           .wrapIcon {
             height: 1.6rem;
             width: 1.6rem;
@@ -114,6 +115,7 @@ header{
             transition-duration: 0.5s; 
             height: 100%;
             right: -64px;
+            overflow: hidden;
             
         }
               
