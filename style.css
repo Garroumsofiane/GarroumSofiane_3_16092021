@@ -122,10 +122,10 @@ a {
   font-weight: bold;
   box-shadow: 1px 3px 9px 1px #eaeaea;
 }
-.fonctionnement li:hover {
+.fonctionnement li:active {
   background-color: #F5EDFF;
 }
-.fonctionnement li:hover .icon {
+.fonctionnement li:active .icon_color {
   color: #9356DC;
 }
 .fonctionnement .chiffre_fonctionnement {
@@ -144,7 +144,7 @@ a {
 .icon_text {
   margin-right: 20px;
 }
-.icon_text .icon {
+.icon_text .icon_color {
   margin-right: 20px;
 }
 
@@ -263,6 +263,7 @@ header .fa-arrow-left {
 .menu {
   border-radius: 40px 40px 0 0;
   position: relative;
+  overflow: hidden;
   margin-top: -55px;
   background-color: #f6f6f6;
   display: flex;
@@ -300,15 +301,15 @@ header .fa-arrow-left {
   flex-direction: row;
   justify-content: space-between;
 }
-.carte_menu:hover .confirmation {
+.carte_menu:active .confirmation {
   animation-name: glissage;
   animation-duration: 0.6s;
   animation-fill-mode: forwards;
 }
-.carte_menu:hover .wrapIcon {
+.carte_menu:active .wrapIcon {
   transform: rotate(0);
 }
-.carte_menu:hover .prix_menu {
+.carte_menu:active .prix_menu {
   animation-name: glissage;
   animation-duration: 0.5s;
   margin-right: 2rem;
