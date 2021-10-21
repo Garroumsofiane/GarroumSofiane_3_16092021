@@ -38,8 +38,54 @@ footer .footer_color {
   font-size: x-small;
 }
 
+@media only screen and (min-width :1024px) {
+  .liste_footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+  }
+}
 body {
   font-family: "roboto";
+}
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: loader 0.01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader__item {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 1rem;
+  animation: jump 1s;
+  animation-iteration-count: 1;
+}
+.loader__itemContainer {
+  display: flex;
+  width: 5rem;
+  justify-content: space-between;
+}
+.loader__item--1 {
+  background-color: #9356DC;
+}
+.loader__item--2 {
+  background-color: #FF79DA;
+  animation-delay: 0.25s;
+}
+.loader__item--3 {
+  background-color: #99E2D0;
+  animation-delay: 0.5s;
 }
 
 a {
@@ -99,6 +145,11 @@ a {
   border-radius: 25px;
   color: white;
   box-shadow: 0px 5px 5px 6px #eaeaea;
+  cursor: pointer;
+}
+.btn_explore_resto_command .explore_resto:hover {
+  box-shadow: 0px 5px 2px 6px #eaeaea;
+  opacity: 0.8;
 }
 
 .fonctionnement {
@@ -109,7 +160,7 @@ a {
   padding-left: 20px;
   margin-top: 50px;
 }
-.fonctionnement li {
+.fonctionnement .fonction {
   width: 90%;
   height: 75px;
   list-style: none;
@@ -122,10 +173,10 @@ a {
   font-weight: bold;
   box-shadow: 1px 3px 9px 1px #eaeaea;
 }
-.fonctionnement li:hover {
+.fonctionnement .fonction:hover {
   background-color: #F5EDFF;
 }
-.fonctionnement li:hover .icon_color {
+.fonctionnement .fonction:hover .icon_color {
   color: #9356DC;
 }
 .fonctionnement .chiffre_fonctionnement {
@@ -172,6 +223,10 @@ a {
   margin-bottom: 30px;
   box-shadow: 1px 3px 9px 1px #eaeaea;
 }
+.restaurant .presentation_restaurant:hover {
+  font-size: 110%;
+  border: 2px solid #99E2D0;
+}
 .restaurant .img_resto {
   width: 100%;
   height: 175px;
@@ -214,6 +269,33 @@ a {
 .legende_titre_icon {
   color: black;
   padding-left: 15px;
+}
+
+@media only screen and (min-width :1024px) {
+  .fonctionnement {
+    height: 150px;
+  }
+  .fonctionnement ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .fonctionnement li {
+    width: 30%;
+    position: relative;
+  }
+  .fonctionnement li .chiffre_fonctionnement {
+    left: -15px;
+  }
+}
+.restaurant {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.restaurant .presentation_restaurant {
+  width: 45%;
 }
 
 body {
@@ -290,29 +372,31 @@ header .fa-arrow-left {
 .carte_menu {
   width: 100%;
   height: 70px;
-  border-radius: 25px;
+  border-radius: 15px;
   cursor: pointer;
   display: flex;
   background-color: white;
   margin-bottom: 20px;
-  flex-direction: column;
   box-shadow: 1px 3px 9px 1px #eaeaea;
   overflow: hidden;
   align-items: center;
-  flex-direction: row;
   justify-content: space-between;
+  animation: itemAppear 1s;
+  animation-timing-function: cubic-bezier(0.32, 0.28, 1, 1);
+  animation-fill-mode: both;
+  transform: scale(0);
+  max-width: 100%;
 }
 .carte_menu:hover .confirmation {
-  animation-name: glissage;
+  animation-name: glissement;
   animation-duration: 0.6s;
   animation-fill-mode: forwards;
-  display: block;
 }
 .carte_menu:hover .wrapIcon {
   transform: rotate(0);
 }
 .carte_menu:hover .prix_menu {
-  animation-name: glissage;
+  animation-name: glissement;
   animation-duration: 0.5s;
   margin-right: 2rem;
   animation-fill-mode: forwards;
@@ -355,14 +439,6 @@ header .fa-arrow-left {
   overflow: hidden;
 }
 
-@keyframes glissage {
-  100% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 .carte {
   width: 95%;
 }
@@ -431,25 +507,41 @@ header .fa-arrow-left {
   border-radius: 25px;
   color: white;
   box-shadow: 0px 5px 5px 6px #eaeaea;
+  cursor: pointer;
   width: 180px;
 }
-.resto_command:hover:active {
-  box-shadow: 0px 5px 15px 6px #eaeaea;
+.resto_command:hover {
+  box-shadow: 0px 5px 2px 6px #eaeaea;
+  opacity: 0.8;
 }
 
-li:hover {
-  background-color: #F5EDFF;
-}
+@media only screen and (min-width :1024px) {
+  .photo_resto {
+    height: 500px;
+  }
 
-.carte_menu {
-  cursor: pointer;
-  animation: itemAppear 1s;
-  animation-timing-function: cubic-bezier(0.32, 0.28, 1, 1);
-  animation-fill-mode: both;
-  transform: scale(0);
-  max-width: 100%;
-}
+  .menu {
+    margin-bottom: 0px;
+  }
+  .menu .titre_menu {
+    text-align-last: center;
+  }
+  .menu .carte_entre_plat_dessert {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .menu .carte {
+    width: 30%;
+  }
 
+  .resto_command {
+    font-size: 1.5rem;
+    width: 300px;
+  }
+}
 @keyframes itemAppear {
   0% {
     transform: scale(0);
@@ -494,45 +586,14 @@ li:hover {
   animation-delay: 4s;
 }
 
-.loader {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  background-color: rgba(255, 255, 255, 0.9);
-  animation: loader 0.01s;
-  animation-delay: 1.75s;
-  animation-fill-mode: both;
-  z-index: 10000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@keyframes glissement {
+  100% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
-.loader__item {
-  height: 1rem;
-  width: 1rem;
-  border-radius: 1rem;
-  animation: jump 1s;
-  animation-iteration-count: 1;
-}
-.loader__itemContainer {
-  display: flex;
-  width: 5rem;
-  justify-content: space-between;
-}
-.loader__item--1 {
-  background-color: #9356DC;
-}
-.loader__item--2 {
-  background-color: #FF79DA;
-  animation-delay: 0.25s;
-}
-.loader__item--3 {
-  background-color: #99E2D0;
-  animation-delay: 0.5s;
-}
-
 @keyframes loader {
   100% {
     opacity: 0;
@@ -551,65 +612,6 @@ li:hover {
   }
   100% {
     transform: translateY(0);
-  }
-}
-@media only screen and (min-width :1024px) {
-  .fonctionnement {
-    height: 150px;
-  }
-  .fonctionnement ul {
-    display: flex;
-    justify-content: space-between;
-  }
-  .fonctionnement li {
-    width: 30%;
-    position: relative;
-  }
-  .fonctionnement li .chiffre_fonctionnement {
-    left: -15px;
-  }
-
-  .restaurant {
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  .restaurant .presentation_restaurant {
-    width: 45%;
-  }
-
-  .liste_footer {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 40px;
-  }
-
-  .photo_resto {
-    height: 500px;
-  }
-
-  .menu {
-    margin-bottom: 0px;
-  }
-  .menu .titre_menu {
-    text-align-last: center;
-  }
-  .menu .carte_entre_plat_dessert {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  .menu .carte {
-    width: 30%;
-  }
-
-  .resto_command {
-    font-size: 1.5rem;
-    width: 300px;
   }
 }
 

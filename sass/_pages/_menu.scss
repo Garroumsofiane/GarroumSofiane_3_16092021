@@ -24,7 +24,6 @@ header{
      height: 255px;  
      object-fit: cover;
  }
- 
  .menu{
     border-radius: 40px 40px 0 0;
     position: relative;
@@ -54,33 +53,34 @@ header{
     .carte_menu{
         width: 100%;
         height: 70px;
-        border-radius: 25px;
+        border-radius: 15px;
         cursor: pointer;
         display: flex;
         background-color: white;
-        margin-bottom: 20px;   
-        flex-direction: column; 
+        margin-bottom: 20px;    
         box-shadow: 1px 3px 9px 1px $background_localite;
         overflow: hidden;
         align-items: center;
-        flex-direction: row;
         justify-content: space-between;
+        animation: itemAppear 1s;
+        animation-timing-function: cubic-bezier(0.32, 0.28, 1, 1);
+        animation-fill-mode: both;
+        transform: scale(0);
+        max-width: 100%;
          &:hover .confirmation{
-                animation-name: glissage;
+                animation-name: glissement;
                 animation-duration: 0.6s; 
                 animation-fill-mode: forwards;
-                display: block;
          }
          &:hover .wrapIcon{ 
             transform: rotate(0);
           }
           &:hover .prix_menu{
-            animation-name: glissage;
+            animation-name: glissement;
                 animation-duration: 0.5s; 
                 margin-right: 2rem;
                 animation-fill-mode: forwards;
           }
-           
           .wrapIcon {
             height: 1.6rem;
             width: 1.6rem;
@@ -105,7 +105,6 @@ header{
           .icon {
             color: $tertiary;
           }
-        
             .confirmation {
             background-color: $tertiary;
             position: absolute;
@@ -117,19 +116,7 @@ header{
             height: 100%;
             right: -64px;
             overflow: hidden;
-            
         }
-              
-     @keyframes glissage {
-    100% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    
-     }
-    }    
 .carte{
     width: 95%;}
     .carte_resto{
@@ -182,11 +169,38 @@ header{
 .resto_command{
         @include btn;
         width:180px;
-        &:hover:active { 
+        &:hover { 
         @include btn_shadow;
+        opacity: 0.8;
          }
 }
-  
+
+@media #{$responsive_min_1024}{
+    .photo_resto{
+        height: 500px;
+    }
+    .menu{
+        margin-bottom: 0px;
+        .titre_menu{
+            text-align-last: center;
+        }
+        .carte_entre_plat_dessert{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+         .carte{
+        width: 30%;
+        }
+     }
+         .resto_command{
+            
+             font-size: 1.5rem;
+             width: 300px;
+         }
+}
 
 
 
