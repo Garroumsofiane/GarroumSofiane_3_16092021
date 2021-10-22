@@ -253,9 +253,6 @@ a {
   top: 195px;
   font-size: 1.9em;
 }
-.coeur_icon:hover {
-  color: #9356DC;
-}
 
 .legende {
   margin-top: 5px;
@@ -286,18 +283,18 @@ a {
   .fonctionnement li .chiffre_fonctionnement {
     left: -15px;
   }
-}
-.restaurant {
-  display: flex;
-  flex-direction: row;
-  height: auto;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.restaurant .presentation_restaurant {
-  width: 45%;
-}
 
+  .restaurant {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .restaurant .presentation_restaurant {
+    width: 45%;
+  }
+}
 body {
   margin: 0px;
 }
@@ -332,8 +329,19 @@ header .fa-arrow-left {
   font-size: x-large;
   opacity: 0.7;
 }
-.coeur_icon_menu:hover {
-  color: #9356DC;
+
+input[type=checkbox]:checked ~ i {
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: anim_coeur 1.5s;
+  font-weight: bolder;
+}
+
+.boite {
+  display: none;
 }
 
 .photo_resto {
@@ -612,6 +620,14 @@ header .fa-arrow-left {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes anim_coeur {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
