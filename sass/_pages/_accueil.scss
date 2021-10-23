@@ -213,6 +213,9 @@ a{
             @media #{$responsive_min_1024} {
     .fonctionnement{
         height: 150px;
+        .fonction{
+            margin-right: 30px;
+        }
     ul{
         display: flex;
         justify-content: space-between;
