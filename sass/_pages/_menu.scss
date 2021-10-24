@@ -130,6 +130,7 @@ input[type="checkbox"]:checked~i{
             overflow: hidden;
         }
 .carte{
+    overflow: hidden;
     width: 95%;}
     .carte_resto{
         margin-bottom: 30px;
@@ -185,7 +186,7 @@ input[type="checkbox"]:checked~i{
         @include btn_shadow;
         opacity: 0.8;
          }
-}
+} 
 
 @media #{$responsive_min_1024}{
     .photo_resto{

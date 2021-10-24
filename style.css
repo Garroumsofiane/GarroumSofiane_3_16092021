@@ -451,6 +451,7 @@ input[type=checkbox]:checked ~ i {
 }
 
 .carte {
+  overflow: hidden;
   width: 95%;
 }
 
