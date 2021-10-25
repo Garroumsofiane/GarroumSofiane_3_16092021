@@ -1,6 +1,10 @@
 body{
     margin: 0px
 }
+.loader{
+    @include loader
+}
+/* HEADER*/
 header{ 
 @include header ;
     .fa-arrow-left{
@@ -10,6 +14,7 @@ header{
         font-size: 1.3rem;
         color: black;
 }
+            /* ICON_COEUR [LIKE]*/
  }
  .coeur_icon_menu{
      @include coeur;
@@ -31,6 +36,7 @@ input[type="checkbox"]:checked~i{
 .boite{
     display: none;
 }
+        /* PHOTO__MENU_CARTES*/
  .photo_resto{
      width: 100%;
      height: 255px;  
@@ -85,10 +91,10 @@ input[type="checkbox"]:checked~i{
                 animation-fill-mode: forwards;
          }
          &:hover .wrapIcon{ 
-            transform: rotate(0);
+                transform: rotate(0);
           }
           &:hover .prix_menu{
-            animation-name: glissement;
+                animation-name: glissement;
                 animation-duration: 0.5s; 
                 margin-right: 2rem;
                 animation-fill-mode: forwards;
@@ -188,7 +194,8 @@ input[type="checkbox"]:checked~i{
         opacity: 0.8;
          }
 } 
-
+        /* RESPONSIVE*/
+        
 @media #{$responsive_min_1024}{
     .photo_resto{
         height: 500px;

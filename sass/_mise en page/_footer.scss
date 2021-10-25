@@ -18,7 +18,6 @@ footer{
     .footer_color{
         color: white;
     }
-
 }
 .icon_footer{
     margin-right: 10px;
@@ -26,6 +25,7 @@ footer{
 .fa-hands-helping{
     font-size: x-small;
 }
+        /* RESPONSIVE*/
 @media #{$responsive_min_1024}{
     .liste_footer{
         display: flex;

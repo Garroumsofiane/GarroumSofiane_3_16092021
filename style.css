@@ -1,14 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-header {
-  width: auto;
-  height: 65px;
-  text-align: center;
-}
-header .logo {
-  padding-top: 15px;
-  width: 150px;
-}
-
 footer {
   width: auto;
   height: 200px;
@@ -38,6 +28,7 @@ footer .footer_color {
   font-size: x-small;
 }
 
+/* RESPONSIVE*/
 @media only screen and (min-width :1024px) {
   .liste_footer {
     display: flex;
@@ -49,6 +40,7 @@ body {
   font-family: "roboto";
 }
 
+/* LOADER*/
 .loader {
   position: fixed;
   height: 100%;
@@ -92,6 +84,19 @@ a {
   text-decoration: none;
 }
 
+header {
+  width: auto;
+  height: 65px;
+  text-align: center;
+  box-shadow: 1px 0px 5px 0px grey;
+  position: relative;
+}
+header .logo {
+  padding-top: 20px;
+  width: 150px;
+}
+
+/* LOCALITE__TITRE*/
 .localite_titre_explore {
   background-color: #f6f6f6;
 }
@@ -152,6 +157,7 @@ a {
   opacity: 0.8;
 }
 
+/* FONCTIONNEMENT*/
 .fonctionnement {
   width: auto;
   height: 441px;
@@ -172,6 +178,7 @@ a {
   margin-bottom: 40px;
   font-weight: bold;
   box-shadow: 1px 3px 9px 1px #eaeaea;
+  cursor: pointer;
 }
 .fonctionnement .fonction:hover {
   background-color: #F5EDFF;
@@ -199,6 +206,7 @@ a {
   margin-right: 20px;
 }
 
+/* PRESENTATION RESTAURANT*/
 .titre_restaurant {
   width: -webkit-fill-available;
   margin-left: 15px;
@@ -252,6 +260,7 @@ a {
   right: 30px;
   top: 195px;
   font-size: 1.9em;
+  cursor: pointer;
 }
 
 .legende {
@@ -268,6 +277,7 @@ a {
   padding-left: 15px;
 }
 
+/* RESPONSIVE*/
 @media only screen and (min-width :1024px) {
   .fonctionnement {
     height: 150px;
@@ -302,15 +312,56 @@ body {
   margin: 0px;
 }
 
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: loader 0.01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader__item {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 1rem;
+  animation: jump 1s;
+  animation-iteration-count: 1;
+}
+.loader__itemContainer {
+  display: flex;
+  width: 5rem;
+  justify-content: space-between;
+}
+.loader__item--1 {
+  background-color: #9356DC;
+}
+.loader__item--2 {
+  background-color: #FF79DA;
+  animation-delay: 0.25s;
+}
+.loader__item--3 {
+  background-color: #99E2D0;
+  animation-delay: 0.5s;
+}
+
+/* HEADER*/
 header {
   width: auto;
   height: 65px;
   text-align: center;
   box-shadow: 1px 0px 5px 0px grey;
   position: relative;
+  /* ICON_COEUR [LIKE]*/
 }
 header .logo {
-  padding-top: 15px;
+  padding-top: 20px;
   width: 150px;
 }
 header .fa-arrow-left {
@@ -326,6 +377,7 @@ header .fa-arrow-left {
   right: 30px;
   top: 195px;
   font-size: 1.9em;
+  cursor: pointer;
   position: absolute;
   right: 30px;
   top: 35px;
@@ -347,6 +399,7 @@ input[type=checkbox]:checked ~ i {
   display: none;
 }
 
+/* PHOTO__MENU_CARTES*/
 .photo_resto {
   width: 100%;
   height: 255px;
@@ -528,6 +581,7 @@ input[type=checkbox]:checked ~ i {
   opacity: 0.8;
 }
 
+/* RESPONSIVE*/
 @media only screen and (min-width :1024px) {
   .photo_resto {
     height: 500px;
@@ -555,6 +609,7 @@ input[type=checkbox]:checked ~ i {
     width: 300px;
   }
 }
+/* ANIM__APPARITION_CARTE*/
 @keyframes itemAppear {
   0% {
     transform: scale(0);
@@ -599,6 +654,7 @@ input[type=checkbox]:checked ~ i {
   animation-delay: 4s;
 }
 
+/* ANIM__CONFIRMATION_CARTE*/
 @keyframes glissement {
   100% {
     transform: translateX(0);
@@ -607,6 +663,7 @@ input[type=checkbox]:checked ~ i {
     transform: translateX(-100%);
   }
 }
+/* ANIM_LOADER*/
 @keyframes loader {
   100% {
     opacity: 0;
@@ -627,6 +684,7 @@ input[type=checkbox]:checked ~ i {
     transform: translateY(0);
   }
 }
+/* ANIM__APPARITION_COEUR*/
 @keyframes anim_coeur {
   0% {
     opacity: 0;
